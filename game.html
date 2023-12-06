@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>GAME</title>
+</head>
+<body>
+   <div class="over">
+     <div class="game-over">
+      <span>GAME OVER</span>
+      <div class="text">Your score is <p>0</p> from 10</div>
+     </div>
+   </div>
+   <div class="win">
+      <div class="you-win">
+       <span>BRAVOOOO</span>
+       <div class="text">You Are Genius</div>
+      </div>
+    </div>
+   <div class="game">
+      <div class="start">
+         <span>Start Game</span>
+      </div>
+    <div class="info-container">
+        <div class="name">
+            Hello: <span></span>
+        </div>
+        <div class="wrong-tries">
+            Wrong Tries: <span>0</span>
+        </div>
+        <div class="timer">
+         timer: <span>0</span>
+     </div>
+     <div class="score">
+         Score: <span>0</span>
+    </div>
+    </div>
+    <div class="faces">
+        <div class="faces-container"data-id="bite">
+            <div class="front face" ></div>
+            <div class="back face">
+            <i class="fa-solid fa-cookie-bite"></i>
+        </div>
+      </div>
+        <div class="faces-container" data-id="bite">
+            <div class="front face"></div>
+            <div class="back face">
+            <i class="fa-solid fa-cookie-bite"></i>
+         </div>
+        </div>
+        <div class="faces-container" data-id="rice">
+            <div class="front face"></div>
+            <div class="back face">
+            <i class="fa-solid fa-bowl-rice"></i>
+         </div>
+        </div>
+        <div class="faces-container" data-id="rice">
+            <div class="front face"></div>
+            <div class="back face">
+            <i class="fa-solid fa-bowl-rice"></i>
+         </div>
+        </div>
+
+        <div class="faces-container" data-id="glass">
+            <div class="front face"></div>
+            <div class="back face">
+            <i class="fa-solid fa-martini-glass"></i>
+         </div>
+        </div>
+
+        <div class="faces-container" data-id="glass" >
+            <div class="front face"></div>
+            <div class="back face">
+            <i class="fa-solid fa-martini-glass"></i>
+         </div>
+        </div>
+
+        <div class="faces-container" data-id="pin">
+            <div class="front face"></div>
+            <div class="back face">
+            <i class="fa-solid fa-map-pin"></i>
+         </div>
+        </div>
+
+     <div class="faces-container" data-id="pin">
+          <div class="front face"></div>
+          <div class="back face">
+          <i class="fa-solid fa-map-pin"></i>
+         </div>
+     </div>
+
+     <div class="faces-container" data-id="fan">
+        <div class="front face"></div>
+        <div class="back face">
+        <i class="fa-solid fa-fan"></i>
+      </div>
+     </div>
+
+     <div class="faces-container" data-id="fan">
+        <div class="front face"></div>
+        <div class="back face">
+        <i class="fa-solid fa-fan"></i>
+      </div>
+     </div>
+
+     <div class="faces-container" data-id="blender">
+        <div class="front face"></div>
+        <div class="back face">
+        <i class="fa-solid fa-blender"></i>
+      </div>
+     </div>
+
+     <div class="faces-container" data-id="blender">
+        <div class="front face"></div>
+        <div class="back face">
+        <i class="fa-solid fa-blender"></i>
+     </div>
+    </div>
+     <div class="faces-container" data-id="book">
+        <div class="front face"></div>
+        <div class="back face">
+        <i class="fa-solid fa-book"></i>
+     </div>
+   </div>
+     <div class="faces-container" data-id="book">
+        <div class="front face"></div>
+        <div class="back face">
+        <i class="fa-solid fa-book"></i>
+     </div>
+   </div>
+
+     <div class="faces-container" data-id="eye">
+        <div class="front face"></div>
+        <div class="back face">
+        <i class="fa-solid fa-eye"></i>
+     </div>
+   </div>
+     <div class="faces-container" data-id="eye">
+        <div class="front face"></div>
+        <div class="back face">
+        <i class="fa-solid fa-eye"></i>
+     </div>
+   </div>
+    </div>
+   </div>
+   
+    <div>
+     <div class="leader">
+      <div class="gamer1">
+       <span class="name"></span> the number of your wrong tries is <span class="tries">0</span> and your score is <span class="score">0</span>
+      </div>
+      <hr>
+      <div class="gamer2">
+      <span class="name"></span> the number of your wrong tries is <span class="tries">0</span> and your score is <span class="score">0</span>
+      </div>
+     </div>
+   </div>
+   
+</body>
+<audio id="Success" src="audio/mixkit-achievement-bell-600.wav" preload="auto"></audio>
+<audio id="fail" src="audio/negative_beeps-6008.mp3" preload="auto"></audio>
+<script src="game.js"></script>
+</html>

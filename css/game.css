@@ -1,0 +1,200 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: beige;
+}
+.over{
+    display: none;
+}
+.over .game-over{
+    background-color: #9e9e9ee6;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+    position: absolute;
+    justify-items: center;
+    top: 76%;
+    left: 25%;
+    border-radius: 23px;
+}
+.over .game-over span{
+    color: wheat;
+    font-size: 68px;
+    position: absolute;
+    top: 32%;
+    right: 20%;
+    font-weight: bold;
+}
+.over div{
+    font-weight: bold;
+    font-size: 18px;
+    right: 7px;
+    position: absolute;
+    bottom: 20px;
+    color: #2196F3;
+}
+.over div p{
+    display: inline;
+}
+.win{
+    display: none;
+}
+.win .you-win{
+    background-color: #9e9e9ee6;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+    position: absolute;
+    justify-items: center;
+    top: 76%;
+    left: 25%;
+    border-radius: 23px;
+}
+.win .you-win span{
+    color: wheat;
+    font-size: 68px;
+    position: absolute;
+    top: 32%;
+    right: 20%;
+    font-weight: bold;
+}
+.win div{
+    font-weight: bold;
+    font-size: 25px;
+    right: 35%;
+    position: absolute;
+    bottom: 50px;
+    color: black;
+
+}
+.win div p{
+    display: inline;
+}
+.start{
+    position: fixed;
+    background-color: #0000ff63;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+.start span{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: red;
+    border: white 1px solid;
+    border-radius: 10%;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.info-container{
+    border: solid 2px #607d8b;
+    background-color: pink;
+    padding: 20px;
+    margin: 20px auto 0;
+    font-weight: bold;
+    width: 1150px;
+    overflow: hidden;
+    font-size: 24px;
+}
+.info-container .name{
+    float: left;
+    width: 25%;
+}
+.info-container .wrong-tries{
+  float: right;
+  width: 25%;
+  text-align: right;
+}
+.info-container .timer{
+    float: right;
+    width: 25%;
+    font-size: 15px;
+    position: absolute;
+    right: 38%;
+}
+.info-container .score{
+    float: right;
+    width: 25%;
+    text-align: right;
+    font-size: 16px;
+    position: absolute;
+    right: 40%;
+}
+ .fa-solid{
+    font-size: 120px;
+    color: blue;
+    margin: 20px 40px;
+}
+.faces{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1100px;
+    margin: 20px auto;
+}
+.faces .faces-container{
+    height: 200px;
+    margin: 0 30px 20px;
+    /* padding: 20px; */
+    transition: transform .5s; 
+    transform-style: preserve-3d;  
+    cursor: pointer;
+    position: relative;
+    flex: 1 0 200px;
+}
+  .faces .faces-container .front::before{
+    content: "?";
+    color: white;
+    font-weight: bold;
+    font-size: 150px;
+}
+ .faces .faces-container .front{
+    background-color:  #607d8b;
+    line-height: 200px;
+    text-align: center;
+}
+.faces .faces-container .back{
+   background-color: #bac5ca;
+   transform: rotateY(180deg);
+}
+
+.faces .faces-container .face{
+    width: 100%;
+    height: 100%;
+    border: solid 5px pink;
+    backface-visibility: hidden;
+    position: absolute;
+}
+.faces .faces-container.is-flipped,
+.faces .faces-container.is-match{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg) ;
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+.faces.no-flip{
+    pointer-events: none;
+}
+.leader{
+    position: absolute;
+    width: 95%;
+    height: 14%;
+    border: 5px solid;
+    left: 3%;
+    padding: 5px;
+    margin: 10px;
+    background-color: #eee;
+    font-size: 20px;
+    font-weight: 900;
+}
