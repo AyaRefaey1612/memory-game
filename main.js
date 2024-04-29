@@ -3,7 +3,7 @@ let array=[];
 let pic=[];
 // start
 document.querySelector(".start span").onclick=function(){
- let yourName=window.prompt("")
+ let yourName=window.prompt('your name')
    if(yourName==null || yourName==""){
     document.querySelector(".info-container .name span").innerHTML="Unknown";
    }else{
