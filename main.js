@@ -1,8 +1,9 @@
-// sart game
+// start game
 let array=[];
 let pic=[];
+// start
 document.querySelector(".start span").onclick=function(){
-    yourName=window.prompt("")
+ let yourName=window.prompt("")
    if(yourName==null || yourName==""){
     document.querySelector(".info-container .name span").innerHTML="Unknown";
    }else{
@@ -17,8 +18,6 @@ let duration=1000;
 let blocksContainer=document.querySelector(".faces");
 
 // generate
-// pic.push("fa-sharp fa-solid fa-gem" , "fa-sharp fa-solid fa-gem" , "fa-solid fa-square-full" ,"fa-solid fa-square-full",
-// "fa-solid fa-dice-d20","fa-solid fa-dice-d20" );
 for(let g=0 ; g< pic.length ;g++){
 let faceContainer=document.createElement("div");
 faceContainer.className="faces-container";
@@ -36,14 +35,13 @@ faceContainer.appendChild(front);
 faceContainer.appendChild(back);
 back.appendChild(i);
  }
-
 let blocks=Array.from(blocksContainer.children);
 let blockRange=[...Array(blocks.length).keys()];
 let timer=document.querySelector(".timer span");
 let score=document.querySelector(".score span");
 let finallyScore=document.querySelector("div p");
+
 // win
-// console.log(blocks.length/2)
 function check(){
 if(parseInt(score.innerHTML) === (blocks.length/2)){
     document.querySelector(".win").style.display="block";
@@ -58,9 +56,8 @@ if(parseInt(score.innerHTML) === (blocks.length/2)){
 };
 // make the timer 
 function gameTime(){  
-    console.log( parseInt(timer.innerHTML))
       timer.innerHTML= parseInt(timer.innerHTML)+1 ;
-     if((parseInt(timer.innerHTML) === 6)){
+     if((parseInt(timer.innerHTML) === 10)){
          document.querySelector(".over").style.display="block"; 
          blocksContainer.classList.add("no-flip");
           finallyScore.innerHTML=parseInt(finallyScore.innerHTML)+parseInt(score.innerHTML);
@@ -75,14 +72,14 @@ function gameTime(){
     }
 
     // flipping at the start
-    function flippingAtTheStart(){
-        blocks.forEach(block => {
-            block.classList.add("is-flipped");
-            setTimeout(() => {
-                block.classList.remove("is-flipped");  
-            }, 3000);
-        });
-    }
+function flippingAtTheStart(){
+    blocks.forEach(block => {
+        block.classList.add("is-flipped");
+        setTimeout(() => {
+            block.classList.remove("is-flipped");  
+        }, 3000);
+    });
+}
 // make a shuffle
 shuffle(blockRange);
 blocks.forEach((block , index) => {
@@ -146,32 +143,38 @@ setTimeout(() => {
 }
 
 // information in localStorage
-if(window.localStorage.getItem("player1")){
+    
+ if(window.localStorage.getItem("player2")){
     function inforamtion(namee , tries , score){
         const info={
            name:namee,
            Tires:tries,
            score:score,
         }
-         
         array.push(info);   
-        window.localStorage.setItem("player2" , JSON.stringify(array));
-    }
-    if(window.localStorage.getItem("player2")){
-        function inforamtion(namee , tries , score){
-            const info={
-               name:namee,
-               Tires:tries,
-               score:score,
-            }
-        
-            array.push(info);
-            window.localStorage.setItem("player1" , JSON.stringify(array));
-            window.localStorage.removeItem("player2")
-        }
+        window.localStorage.setItem("player1" , JSON.stringify(array));
     }
     
+}else{
+    function inforamtion(namee , tries , score){
+        const info={
+           name:namee,
+           Tires:tries,
+           score:score,
+        }
+        array.push(info);   
+    window.localStorage.setItem("player2" , JSON.stringify(array));
+    
 }
+}
+setTimeout(()=>{
+if((window.localStorage.getItem("player1"))&&(window.localStorage.getItem("player2"))){
+    
+    console.log('yes 1 && 2') 
+    window.localStorage.removeItem("player1");
+    window.localStorage.removeItem("player2")
+}
+},1000)
 let gamer1=Object.assign(JSON.parse(window.localStorage.getItem("player1")));
 document.querySelector(".leader .gamer1 .name").innerHTML=`${gamer1[0].name}`
 document.querySelector(".leader .gamer1 .tries").innerHTML=`${gamer1[0].Tires}`
