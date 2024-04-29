@@ -10,32 +10,29 @@ body{
 .over{
     display: none;
 }
+
 .over .game-over{
     background-color: #9e9e9ee6;
     width: 50%;
     height: 50%;
     z-index: 1;
-    position: absolute;
-    justify-items: center;
-    top: 76%;
-    left: 25%;
     border-radius: 23px;
 }
 .over .game-over span{
     color: wheat;
     font-size: 68px;
     position: absolute;
-    top: 32%;
-    right: 20%;
+    top: 7%;
+    right: 13%;
     font-weight: bold;
 }
 .over div{
     font-weight: bold;
-    font-size: 18px;
-    right: 7px;
+    font-size: 25px;
+    right: 35%;
     position: absolute;
-    bottom: 20px;
-    color: #2196F3;
+    bottom: 75%;
+    color: black;
 }
 .over div p{
     display: inline;
@@ -48,10 +45,6 @@ body{
     width: 50%;
     height: 50%;
     z-index: 1;
-    position: absolute;
-    justify-items: center;
-    top: 76%;
-    left: 25%;
     border-radius: 23px;
 }
 .win .you-win span{
@@ -67,10 +60,11 @@ body{
     font-size: 25px;
     right: 35%;
     position: absolute;
-    bottom: 50px;
+    bottom: 50%;
     color: black;
-
 }
+
+
 .win div p{
     display: inline;
 }
@@ -86,7 +80,7 @@ body{
 .start span{
     position: absolute;
     color: white;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: red;
@@ -96,17 +90,22 @@ body{
     font-size: 30px;
     cursor: pointer;
 }
-
+.game{
+  width: 500px;
+  margin: 0 150px;
+}
 
 .info-container{
     border: solid 2px #607d8b;
     background-color: pink;
-    padding: 20px;
+    padding: 8px;
     margin: 20px auto 0;
     font-weight: bold;
-    width: 1150px;
+    width: 884px;
     overflow: hidden;
     font-size: 24px;
+    position: relative;
+    left: 49px;
 }
 .info-container .name{
     float: left;
@@ -137,38 +136,54 @@ body{
     color: blue;
     margin: 20px 40px;
 }
+
+.fa-solid, .fas {
+    font-weight: 900;
+    right: 11px;
+    position: relative;
+    font-size: 55px;
+}
 .faces{
     display: flex;
     flex-wrap: wrap;
-    width: 1100px;
-    margin: 20px auto;
+    width: 890px;
+    margin:  25px 55px;
 }
 .faces .faces-container{
-    height: 200px;
-    margin: 0 30px 20px;
-    /* padding: 20px; */
+    height: 70px;
+    margin: 0 10px 20px ;
     transition: transform .5s; 
     transform-style: preserve-3d;  
     cursor: pointer;
     position: relative;
-    flex: 1 0 200px;
+    flex: 1 0 159px;
 }
   .faces .faces-container .front::before{
     content: "?";
     color: white;
     font-weight: bold;
-    font-size: 150px;
+    font-size: 60px;
+    bottom: 92px;
+    position: relative;
 }
  .faces .faces-container .front{
     background-color:  #607d8b;
     line-height: 200px;
     text-align: center;
+    font-size: 140px;
 }
 .faces .faces-container .back{
-   background-color: #bac5ca;
+   background-color: antiquewhite;
    transform: rotateY(180deg);
 }
 
+.faces .faces-container .back i{
+    width: 140px;
+    height: 140px;
+    font-size: 51px;
+    margin-left: 70px;
+    margin-top: 4px;
+}
 .faces .faces-container .face{
     width: 100%;
     height: 100%;
@@ -187,14 +202,316 @@ body{
     pointer-events: none;
 }
 .leader{
-    position: absolute;
-    width: 95%;
-    height: 14%;
+    position: relative;
+    width: 900px;
+    height: 19%;
     border: 5px solid;
-    left: 3%;
+    left: 24px;
     padding: 5px;
-    margin: 10px;
+    margin: 0 20px;
     background-color: #eee;
     font-size: 20px;
     font-weight: 900;
 }
+@media (max-width: 480px){
+
+ .game{
+  width: 200px;
+  margin: 0;
+ }
+
+  .info-container {
+    font-size: 15px;
+    width: 356px;
+    position: relative;
+    left: 3px;
+    margin: 2px 0;
+  }
+
+
+  .info-container .score {
+    float: right;
+    width: 25%;
+    text-align: right;
+    font-size: 13px;
+    position: absolute;
+    right: 172px;
+    bottom: -1px;
+}
+
+.info-container .wrong-tries {
+  width: 31%;
+}
+.info-container .timer {
+  width: 23%;
+  right: 38%;
+  top: -1px;
+}
+  .faces{
+    width: 350px;
+    margin: 40px 0px;
+   }
+  .faces .faces-container{
+      flex: 0 0 75px;
+      margin: 3px 5px;
+   }
+   .faces .faces-container .back i {
+   margin-left: 19px;
+   }
+
+   .leader {
+    width: 348px;
+    height: 110px;
+    margin: 30px 0;
+    left: 5px;
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+.win .you-win {
+  width: 343px;
+  height: 215px;
+  margin: 38px -115px;
+}
+
+.win .you-win span {
+  top: 64px;
+  right: 54px;
+  font-size: 44px;
+}
+
+.over div{
+  bottom: 50%;
+}
+.over div.text{
+  right: 12%;
+  bottom: 23px;
+}
+
+.over .game-over {
+  width: 343px;
+  height: 215px;
+  margin: 38px -115px;
+}
+
+.over .game-over span {
+  top: 64px;
+  right: 54px;
+  font-size: 44px;
+}
+
+.win .you-win span.genius {
+  font-size: 36px;
+  top: 102px;
+  right: -14px;
+  width: 271px;
+}
+}
+
+/* Styles for larger smartphones and smaller tablets */
+@media (min-width: 480px) and (max-width: 767px) {
+
+  .game {
+    width: 483px;
+    margin: 0;
+}
+ .info-container {
+    width: 537px;
+    font-size: 14px;
+    left: 1px;
+ }
+  .info-container .timer {
+    right: 23%;
+    top: 21px;
+    font-size: 11px;
+ }
+
+  .info-container .wrong-tries {
+    width: 30%;
+ }
+
+ .faces{
+  width: 389px;
+ }
+
+ .faces .faces-container .back i {
+  margin-left: 20px;
+  }
+  .faces .faces-container{
+    flex: 0 0 75px;
+ }
+
+.win .you-win {
+  width: 40%;
+  height: 40%;
+  right: 44%;
+  bottom: 41%;
+  margin: auto;
+}
+
+.win .you-win span {
+  font-size: 108%;
+  top: 32%;
+  right: 20%;
+}
+.win .you-win span.genius {
+  font-size: 90%;
+  top: 102px;
+  right: -1%;
+  width: 248%;
+}
+
+.over .game-over {
+  width: 48%;
+  height: 33%;
+}
+
+.over div {
+  right: 44%;
+  bottom: 39%;
+}
+
+.over div.text {
+  right: 10px;
+}
+.over .game-over span {
+  font-size: 31px;
+}
+.leader {
+  width: 537px;
+  left: 3px;
+  margin: 0px;
+  font-size: 11px;
+}
+ 
+
+}
+
+ /* Styles for tablets and smaller laptops */
+ @media (min-width: 768px) and (max-width: 1023px){
+  .game {
+    width: 766px;
+    margin: auto;
+   }
+  .faces{
+    width: 544px;
+    margin: auto;
+  }
+ .faces .faces-container{
+   flex: 0 1 123px;
+   margin: 5px;
+ }
+
+.info-container {
+    width: 597px;
+    font-size: 18px;
+    margin: 17px auto;
+    left: 0;
+}
+
+.over .game-over {
+  width: 500px;
+  height: 250px;
+  margin: -48px -99px;
+}
+
+.over .game-over span {
+  font-size: 55px;
+  top: 20px;
+  right: 146px;
+}
+.over div {
+  font-size: 25px;
+  top: 157px;
+}
+
+.win .you-win {
+  width: 500px;
+  height: 250px;
+  margin: -48px -99px;
+}
+
+.win .you-win span {
+  font-size: 55px;
+  top: 20px;
+  right: 146px;
+  width: 304px;
+}
+
+.win div {
+   font-size: 25px;
+   top: 157px;
+}
+.leader{
+    width: 639px;
+    font-size: 17px;
+    left: 37px;
+}
+
+.win .you-win span.genius{
+  font-size: 36px;
+  top: 102px;
+  right: -14px;
+  width: 271px;
+}
+}
+
+  /* Styles for larger laptops */
+@media (min-width: 1024px){
+
+ .game {
+   width: 900px;
+   margin: auto;
+ } 
+ .faces{
+    width: 783px;
+  }
+  .info-container {
+    width: 783px;
+    left: 1px;
+  }
+  .leader{
+    left: 41px;
+    width: 783px;
+  }
+
+  .win .you-win {
+    width: 600px;
+    height: 300px;
+    margin: -92px -119px;
+ 
+  }
+  .win .you-win span {
+  top: 50px;
+  right: 98px;
+  }
+
+  .over .game-over{
+    width: 600px;
+    height: 300px;
+    margin: -166px -109px;
+  }
+
+  .win .you-win span{
+    top: 50px;
+    right: 140px;
+    width: 304px;
+  }
+
+  .win .you-win span.genius {
+    font-size: 36px;
+    top: 102px;
+    right: -14px;
+    width: 271px;
+  }
+
+  .over div.text{
+    bottom: 12%;
+    right: 4%;
+  }
+
+
+}
+
+  
