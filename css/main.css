@@ -217,7 +217,7 @@ body{
 
  .game{
   width: 200px;
-  margin: 0;
+  margin: 0 20px;
  }
 
   .info-container {
@@ -249,7 +249,7 @@ body{
 }
   .faces{
     width: 350px;
-    margin: 40px 0px;
+    margin: 40px 10px;
    }
   .faces .faces-container{
       flex: 0 0 75px;
